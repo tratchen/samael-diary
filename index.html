@@ -3,23 +3,21 @@ layout: default
 ---
 
 <div class="home">
-
   {% for category in site.categories %}
-    <li>
-      <h2 name="{{ category | first }}">{{ category | first }}</h2>
-
-      <ul>
+    <div class="home-category">
+      <h2 class="home-category-title" name="{{ category | first }}">{{ category | first }}</h2>
       {% for posts in category %}
         {% for post in posts %}
           {% if post.url %}
-            <li>
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li>
+            <div class="home-category-entry">
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+                <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+              </a>
+            </div>
           {% endif %}
         {% endfor %}
       {% endfor %}
-      </ul>
-    </li>
+    </div>
   {% endfor %}
-
 </div>

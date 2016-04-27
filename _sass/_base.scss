@@ -8,15 +8,17 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 
 /**
  * Basic styling
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
+    color: $ebonyClay;
+    background-color: $gallery;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -95,11 +97,11 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $thunderbird;
     }
 
     &:hover {
-        color: $text-color;
+        color: $thunderbird;
         text-decoration: underline;
     }
 }

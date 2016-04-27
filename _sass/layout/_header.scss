@@ -1,0 +1,43 @@
+/**
+ * Site header
+ */
+.site-header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: $header-width;
+    background-color: $midnightBlue;
+    color: $clouds;
+    padding: 30px 15px;
+
+    .site-title {
+        display: block;
+        font-size: 22px;
+        line-height: 1;
+        color: $hoki;
+        text-decoration: none;
+        font-family: $title-font-family;
+        padding-bottom: 20px;
+    }
+}
+
+
+.site-nav {
+    .page-link {
+        display: block;
+        padding: 5px 15px;
+        border: 1px solid $ebonyClay;
+        margin-bottom: -1px;
+        background-color: $wetAsphalt;
+        color: $hoki;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $hoki;
+            color: $wetAsphalt;
+        }
+    }
+}

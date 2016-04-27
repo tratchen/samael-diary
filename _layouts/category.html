@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <ul class="category-list">
+          {% for post in site.categories.[page.category] %}
+            <li>
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                <h2>{{ post.title }}</h2>
+                {% if post.year %}
+                  <span class="year">({{ post.year }})</span>
+                {% endif %}
+                <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
